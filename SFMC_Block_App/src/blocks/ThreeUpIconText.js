@@ -18,7 +18,7 @@ export const generateThreeUpIconText = (data) => {
   } = data || {};
 
   return `
-<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; width:768px;font-family:Helvetica, Arial, sans-serif;">
+<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; width:768px;font-family:Helvetica, Arial, sans-serif;" align="center">
   ${headline ? `
   <!-- Headline gallery -->
   <tr>

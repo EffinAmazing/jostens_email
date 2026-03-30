@@ -10,7 +10,7 @@ export const generateIconGridText = (data) => {
   } = data || {};
 
   return `
-<table role="presentation" class="vw100" style="background-color:${bgColor}; width:96%; direction:ltr;margin: 0 auto" dir="ltr">
+<table role="presentation" class="vw100" style="background-color:${bgColor}; width:96%; direction:ltr;margin: 0 auto" dir="ltr" align="center">
   <tr>
     <!--== Left Half ==-->
     <td class="vw100 ha db" style="background-color:${bgColor}; width:50%;" valign="middle">

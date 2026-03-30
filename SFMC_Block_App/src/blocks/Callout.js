@@ -11,7 +11,7 @@ export const generateCallout = (data) => {
   } = data || {};
 
   return `
-<table role="presentation" class="vw100 bg-dark3 header" style="background-color:#ffffff; background-color:${bgColor}; width:768px; color:${textColor};">
+<table role="presentation" class="vw100 bg-dark3 header" style="background-color:#ffffff; background-color:${bgColor}; width:768px; color:${textColor};" align="center">
   <tr>
     <td valign="middle" align="center" class="padt20 padb20 padlr20" style="padding:20px 25px 20px 30px;">
       <table role="presentation" style="width:100%;direction: rtl" dir="rtl">

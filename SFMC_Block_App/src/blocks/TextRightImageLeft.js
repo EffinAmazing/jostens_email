@@ -17,7 +17,7 @@ export const generateTextRightImageLeft = (data) => {
   } = data || {};
 
   return `
-<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; background-color:${bgColor}; width:768px; direction:${direction};" dir="${direction}">
+<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; background-color:${bgColor}; width:768px; direction:${direction};" dir="${direction}" align="center">
   <tr>
     <!--== Left Half ==-->
     <td class="vw100 ha db" style="width:256px;" valign="middle">

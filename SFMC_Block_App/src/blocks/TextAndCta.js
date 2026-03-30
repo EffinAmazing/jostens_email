@@ -13,7 +13,7 @@ export const generateTextAndCta = (data) => {
   } = data || {};
 
   return `
-<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; background-color:${bgColor}; width:768px;font-family:Helvetica, Arial, sans-serif;">
+<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; background-color:${bgColor}; width:768px;font-family:Helvetica, Arial, sans-serif;" align="center">
   <!-- Headline -->
   <tr>
     <td class="padlr20 padt30 padb20 fs32 lh38" style="padding:30px 20px 20px; font-size:40px; line-height:56px; font-weight:500;text-transform:uppercase;" align="center">

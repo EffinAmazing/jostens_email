@@ -8,7 +8,7 @@ export const generateHeaderBannerImage = (data) => {
   } = data || {};
 
   return `
-<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; background-color:${bgColor}; width:768px;font-family:Helvetica, Arial, sans-serif;">
+<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; background-color:${bgColor}; width:768px;font-family:Helvetica, Arial, sans-serif;" align="center">
   <tr>
     <td align="center">
       <a href="${linkUrl}" alias="${linkAlias}" style="text-decoration:none;">
