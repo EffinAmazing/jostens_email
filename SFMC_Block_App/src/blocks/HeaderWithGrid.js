@@ -8,7 +8,6 @@ export const generateHeaderWithGrid = (data) => {
     headline = 'EXPERTISE FOR ADVISERS',
     subcopy = 'WEEKLY TIPS + INSPIRATION',
     subcopyColor = '#222222',
-    hideLogo = false,
     
     gridBgColor = '#ffffff', // This will now be passed to IconGridText as bgColor
     icon1Url = 'https://cdn.jostens.com/apps/shop/images/email/2026/Yearbook/B2B/Aircover/Icon/Book.png',
@@ -24,7 +23,6 @@ export const generateHeaderWithGrid = (data) => {
     headline,
     subcopy,
     subcopyColor,
-    hideLogo
   };
 
   const gridObj = {

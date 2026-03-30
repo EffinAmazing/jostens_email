@@ -122,8 +122,31 @@ body, td, th, p, div, li, a, span {mso-line-height-rule: exactly;}
 	<!-- Start of Email Content -->
 	<table role="presentation" class="wrap-bg wrap-dark" style="background-color:#dedede;" width="100%" align="center">
 		<tr>
-				<!-- SFMC CONTENT SLOT (Table cell is now the slot for maximum stability) -->
-				<td class="pad0" style="padding:0 0 20px;" align="center" data-type="slot" data-key="jostens-main-slot" data-label="Drop Blocks Here">
+			<td class="pad0" align="center">
+
+				<!-- Header -->
+				<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; width:768px; font-family:Helvetica, Arial, sans-serif;" align="center">
+					<tr>
+						<td class="padlr20" style="padding:20px 40px;" align="left">
+							<!-- Jostens Logo -->
+							<a href="https://www.jostens.com/" alias="Sec0_Header_JostensLogo" style="text-decoration:none;">
+								<img src="https://cdn.jostens.com/apps/shop/images/email/2024/Common/Logo/jostenslogo_black_outlined.png" class="logo dn-dark" alt="Jostens" width="76" />
+								<!--[if !mso]><!--><img src="https://cdn.jostens.com/apps/shop/images/email/2024/Common/Logo/jostenslogo_white.png" class="di-dark logo" style="display:none;" alt="Jostens" width="76" /><!--<![endif]-->
+							</a>
+						</td>
+						<td class="dn" style="padding:20px 40px; font-family:Helvetica, Arial, sans-serif; font-size:10px; line-height:10px;" align="right">
+							<a href="%%view_email_url%%" alias="Sec0_Header_ViewOnline" style="text-decoration:none;"><span class="c-dark" style="color:#444444;">VIEW ONLINE</span></a>
+						</td>
+					</tr>
+				</table>
+
+				<!-- Content Slot -->
+				<table role="presentation" class="vw100" style="width:768px;" align="center">
+					<tr>
+						<td class="pad0" style="padding:0 0 20px;" align="center" data-type="slot" data-key="jostens-main-slot" data-label="Drop Blocks Here">
+						</td>
+					</tr>
+				</table>
 
 				<!-- Footer -->
 				<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; width:768px; font-family:Helvetica, Arial, sans-serif;" align="center">
@@ -137,11 +160,22 @@ body, td, th, p, div, li, a, span {mso-line-height-rule: exactly;}
 						</td>
 					</tr>
 					<tr>
-						<td class="fs12 lh16" style="padding:0 0 20px; font-family:Helvetica, Arial, sans-serif; font-size:12px; line-height:16px;" align="center">
+						<td class="fs12 lh16" style="padding:0 40px 10px; font-family:Helvetica, Arial, sans-serif; font-size:12px; line-height:16px;" align="center">
+							<span style="color:#000000;" class="c-dark2">%%Member_Busname%%<br>
+							%%Member_Addr%%, %%Member_City%%, %%Member_State%% %%Member_PostalCode%% %%Member_Country%%</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="fs12 lh16" style="padding:0 0 40px; font-family:Helvetica, Arial, sans-serif; font-size:12px; line-height:16px;" align="center">
 							<span style="color:#000000;" class="c-dark2">©%%=Concat(Format(Now(),"yyyy"))=%%&nbsp;Jostens,&nbsp;Inc. All&nbsp;rights&nbsp;reserved.</span>
 						</td>
 					</tr>
 				</table>
+
+				<!-- Tracking -->
+				<div style="display:none;">
+					<custom name="opencounter" type="tracking"/>
+				</div>
 
 			</td>
 		</tr>

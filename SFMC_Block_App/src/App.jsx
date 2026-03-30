@@ -11,6 +11,7 @@ const ALL_BLOCKS = [
   { id: 'HeaderBannerImage', label: 'Hero/Banner Image' },
   { id: 'TextAndCta', label: 'Text and CTA Button' },
   { id: 'TextRightImageLeft', label: 'Text Right / Image Left (Halves)' },
+  { id: 'TextLeftImageRight', label: 'Text Left / Image Right (Halves)' },
   { id: 'ThreeUpIconText', label: 'Three-Up Icon Gallery' },
   { id: 'IconGridText', label: 'Icon Grid with Text' },
   { id: 'HeaderWithGrid', label: 'Header with Icon Grid' }
@@ -85,6 +86,9 @@ function App() {
       case 'TextRightImageLeft':
         html = blocks.generateTextRightImageLeft(data);
         break;
+      case 'TextLeftImageRight':
+        html = blocks.generateTextLeftImageRight(data);
+        break;
       case 'ThreeUpIconText':
         html = blocks.generateThreeUpIconText(data);
         break;
@@ -148,32 +152,31 @@ function App() {
         {renderField('bgColor', 'Background Color', 'color', !['PlainText', 'Callout', 'HeaderBannerImage', 'TextAndCta', 'TextRightImageLeft', 'IconGridText'].includes(currentType))}
         
         {/* TEXT BLOCKS */}
-        {renderField('headline', 'Headline Text', 'text', !['TextAndCta', 'Callout', 'TextRightImageLeft', 'ThreeUpIconText', 'HeaderWithGrid'].includes(currentType))}
-        {renderField('headlineColor', 'Headline Color', 'color', !['TextAndCta', 'Callout', 'TextRightImageLeft'].includes(currentType))}
+        {renderField('headline', 'Headline Text', 'text', !['TextAndCta', 'Callout', 'TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText', 'HeaderWithGrid'].includes(currentType))}
+        {renderField('headlineColor', 'Headline Color', 'color', !['TextAndCta', 'Callout', 'TextRightImageLeft', 'TextLeftImageRight'].includes(currentType))}
         
-        {renderField('copy', 'Body Copy', 'text', !['PlainText', 'TextAndCta', 'TextRightImageLeft', 'ThreeUpIconText'].includes(currentType))}
-        {renderField('copyColor', 'Body Color', 'color', !['PlainText', 'TextAndCta', 'TextRightImageLeft', 'ThreeUpIconText'].includes(currentType))}
+        {renderField('copy', 'Body Copy', 'text', !['PlainText', 'TextAndCta', 'TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText'].includes(currentType))}
+        {renderField('copyColor', 'Body Color', 'color', !['PlainText', 'TextAndCta', 'TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText'].includes(currentType))}
         
         {/* CALLOUT SPECIFIC */}
         {renderField('subcopy', 'Sub Copy', 'text', !['Callout', 'HeaderWithGrid'].includes(currentType))}
         {renderField('subcopyColor', 'Sub Copy Color', 'color', !['Callout', 'HeaderWithGrid'].includes(currentType))}
         {renderField('headerBgColor', 'Header Bg Color', 'color', !['Callout', 'HeaderWithGrid', 'ThreeUpIconText'].includes(currentType))}
         {renderField('headerTextColor', 'Header Text Color', 'color', !['Callout', 'HeaderWithGrid', 'ThreeUpIconText'].includes(currentType))}
-        {renderField('hideLogo', 'Hide Jostens Logo', 'checkbox', !['Callout', 'HeaderWithGrid'].includes(currentType))}
 
         {/* BUTTON PARAMETERS */}
-        {renderField('hideButton', 'Hide Button', 'checkbox', !['TextRightImageLeft', 'ThreeUpIconText'].includes(currentType))}
-        {renderField('btnText', 'Button Text', 'text', (!['TextAndCta', 'TextRightImageLeft', 'ThreeUpIconText'].includes(currentType)) || data.hideButton)}
-        {renderField('btnLink', 'Button / Image Link URL', 'text', !['TextAndCta', 'TextRightImageLeft', 'ThreeUpIconText', 'HeaderBannerImage'].includes(currentType))}
-        {renderField('btnColor', 'Button Background Color', 'color', (!['TextAndCta', 'TextRightImageLeft', 'ThreeUpIconText'].includes(currentType)) || data.hideButton)}
-        {renderField('btnTextColor', 'Button Text Color', 'color', (!['TextAndCta', 'TextRightImageLeft', 'ThreeUpIconText'].includes(currentType)) || data.hideButton)}
+        {renderField('hideButton', 'Hide Button', 'checkbox', !['TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText'].includes(currentType))}
+        {renderField('btnText', 'Button Text', 'text', (!['TextAndCta', 'TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText'].includes(currentType)) || data.hideButton)}
+        {renderField('btnLink', 'Button / Image Link URL', 'text', !['TextAndCta', 'TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText', 'HeaderBannerImage'].includes(currentType))}
+        {renderField('btnColor', 'Button Background Color', 'color', (!['TextAndCta', 'TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText'].includes(currentType)) || data.hideButton)}
+        {renderField('btnTextColor', 'Button Text Color', 'color', (!['TextAndCta', 'TextRightImageLeft', 'TextLeftImageRight', 'ThreeUpIconText'].includes(currentType)) || data.hideButton)}
 
         {/* SINGLE IMAGE / BANNER PARAMETERS */}
-        {renderField('imgUrl', 'Image URL', 'text', !['HeaderBannerImage', 'TextRightImageLeft'].includes(currentType))}
-        {renderField('imgAlt', 'Image Alt Text', 'text', !['HeaderBannerImage', 'TextRightImageLeft'].includes(currentType))}
+        {renderField('imgUrl', 'Image URL', 'text', !['HeaderBannerImage', 'TextRightImageLeft', 'TextLeftImageRight'].includes(currentType))}
+        {renderField('imgAlt', 'Image Alt Text', 'text', !['HeaderBannerImage', 'TextRightImageLeft', 'TextLeftImageRight'].includes(currentType))}
         
         {/* HALVES SPECIFICS */}
-        {renderField('direction', 'Image Alignment', 'text', !['TextRightImageLeft'].includes(currentType))} {/* ltr or rtl */}
+        {renderField('direction', 'Image Alignment', 'text', !['TextRightImageLeft', 'TextLeftImageRight'].includes(currentType))} {/* ltr or rtl */}
 
         {/* THREE UP CONSTANTS */}
         {renderField('img1Url', 'Image 1 URL', 'text', !['ThreeUpIconText'].includes(currentType))}
