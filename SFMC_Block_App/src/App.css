@@ -1,0 +1,84 @@
+.app-container {
+  font-family: 'Salesforce Sans', Helvetica, Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: #16325c;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.main-select {
+  background-color: #f4f6f9;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #d8dde6;
+  margin-bottom: 20px;
+}
+
+.fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #3e3e3c;
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input[type="text"],
+select {
+  padding: 8px 12px;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease-in-out;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #1589ee;
+  box-shadow: 0 0 3px #1589ee;
+}
+
+input[type="color"] {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.form-group:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.form-group:has(input[type="checkbox"]) label {
+  margin-bottom: 0;
+}
