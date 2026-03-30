@@ -2,13 +2,13 @@ export const generateHeaderBannerImage = (data) => {
   const {
     bgColor = '#ffffff',
     imgUrl = 'https://placehold.co/768x400',
-    linkUrl = '#',
+    linkUrl = '%%=RedirectTo(@href)=%%',
     imgAlt = '',
-    linkAlias = 'Hero_Image'
+    linkAlias = 'Sec1_Hero_Image'
   } = data || {};
 
   return `
-<table role="presentation" class="vw100 bg-dark" style="background-color:${bgColor}; width:768px;font-family:Helvetica, Arial, sans-serif;">
+<table role="presentation" class="vw100 bg-dark" style="background-color:#ffffff; background-color:${bgColor}; width:768px;font-family:Helvetica, Arial, sans-serif;">
   <tr>
     <td align="center">
       <a href="${linkUrl}" alias="${linkAlias}" style="text-decoration:none;">

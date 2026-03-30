@@ -10,16 +10,12 @@ export const generateHeaderWithGrid = (data) => {
     subcopyColor = '#222222',
     hideLogo = false,
     
-    gridContainerBgColor = '#ffffff',
-    gridBgColor = '#ffffff',
-    icon1Url = 'https://placehold.co/100x100',
-    title1 = 'FEATURE ONE',
-    copy1 = 'Description for feature one goes here...',
-    icon2Url = 'https://placehold.co/100x100',
-    title2 = 'FEATURE TWO',
-    copy2 = 'Description for feature two goes here...',
-    gridTextColor = '#212121',
-    gridTitleColor = '#212121'
+    gridBgColor = '#ffffff', // This will now be passed to IconGridText as bgColor
+    icon1Url = 'https://cdn.jostens.com/apps/shop/images/email/2026/Yearbook/B2B/Aircover/Icon/Book.png',
+    copy1 = 'Real‑time visibility into coverage',
+    icon2Url = 'https://cdn.jostens.com/apps/shop/images/email/2026/Yearbook/B2B/Aircover/Icon/Clock.png',
+    copy2 = 'Flexible, adviser‑friendly deadlines',
+    gridTextColor = '#212121'
   } = data || {};
 
   const calloutObj = {
@@ -32,16 +28,12 @@ export const generateHeaderWithGrid = (data) => {
   };
 
   const gridObj = {
-    bgColor: gridContainerBgColor,
-    gridBgColor,
+    bgColor: gridBgColor,
     icon1Url,
-    title1,
     copy1,
     icon2Url,
-    title2,
     copy2,
-    textColor: gridTextColor,
-    titleColor: gridTitleColor
+    textColor: gridTextColor
   };
 
   return `
